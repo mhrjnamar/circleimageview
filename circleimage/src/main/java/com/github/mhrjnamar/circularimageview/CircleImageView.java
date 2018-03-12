@@ -34,26 +34,26 @@ public class CircleImageView extends AppCompatImageView {
     @Override
     protected void onDraw(Canvas canvas) {
 
-        Drawable drawable = getDrawable();
-
-        if (drawable == null) {
-            return;
-        }
-
-        if (getWidth() == 0 || getHeight() == 0) {
-            return;
-        }
-
-        Bitmap b = ((BitmapDrawable) drawable).getBitmap();
-        if (b== null){
-            return;
-        }
-        Bitmap bitmap = b.copy(Bitmap.Config.ARGB_8888, true);
-
-        int width = getWidth();
-
-        Bitmap roundBitmap = getCroppedBitmap(bitmap, width);
-        canvas.drawBitmap(roundBitmap, 0, 0, null);
+//        Drawable drawable = getDrawable();
+//
+//        if (drawable == null) {
+//            return;
+//        }
+//
+//        if (getWidth() == 0 || getHeight() == 0) {
+//            return;
+//        }
+//
+//        Bitmap b = ((BitmapDrawable) drawable).getBitmap();
+//        if (b== null){
+//            return;
+//        }
+//        Bitmap bitmap = b.copy(Bitmap.Config.ARGB_8888, true);
+//
+//        int width = getWidth();
+//
+//        Bitmap roundBitmap = getCroppedBitmap(bitmap, width);
+//        canvas.drawBitmap(roundBitmap, 0, 0, null);
     }
 
     private Bitmap getCroppedBitmap(Bitmap bitmap, int radius) {
